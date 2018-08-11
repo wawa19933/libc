@@ -106,6 +106,7 @@ fn main() {
         cfg.header("sys/socket.h");
         if linux && !musl {
             cfg.header("linux/if.h");
+            cfg.header("linux/net_tstamp.h");
             cfg.header("sys/auxv.h");
         }
         cfg.header("sys/time.h");

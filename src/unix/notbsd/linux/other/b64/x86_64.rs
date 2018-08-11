@@ -389,6 +389,30 @@ pub const SO_INCOMING_CPU: ::c_int = 49;
 pub const SO_ATTACH_BPF: ::c_int = 50;
 pub const SO_DETACH_BPF: ::c_int = SO_DETACH_FILTER;
 
+pub const SOF_TIMESTAMPING_TX_HARDWARE: ::c_int = (1<<0);
+pub const SOF_TIMESTAMPING_TX_SOFTWARE: ::c_int = (1<<1);
+pub const SOF_TIMESTAMPING_RX_HARDWARE: ::c_int = (1<<2);
+pub const SOF_TIMESTAMPING_RX_SOFTWARE: ::c_int = (1<<3);
+pub const SOF_TIMESTAMPING_SOFTWARE: ::c_int = (1<<4);
+pub const SOF_TIMESTAMPING_SYS_HARDWARE: ::c_int = (1<<5);
+pub const SOF_TIMESTAMPING_RAW_HARDWARE: ::c_int = (1<<6);
+pub const SOF_TIMESTAMPING_OPT_ID: ::c_int = (1<<7);
+pub const SOF_TIMESTAMPING_TX_SCHED: ::c_int = (1<<8);
+pub const SOF_TIMESTAMPING_TX_ACK: ::c_int = (1<<9);
+pub const SOF_TIMESTAMPING_OPT_CMSG: ::c_int = (1<<10);
+pub const SOF_TIMESTAMPING_OPT_TSONLY: ::c_int = (1<<11);
+pub const SOF_TIMESTAMPING_OPT_STATS: ::c_int = (1<<12);
+pub const SOF_TIMESTAMPING_OPT_PKTINFO: ::c_int = (1<<13);
+pub const SOF_TIMESTAMPING_OPT_TX_SWHW: ::c_int = (1<<14);
+pub const SOF_TIMESTAMPING_LAST: ::c_int = SOF_TIMESTAMPING_OPT_TX_SWHW;
+pub const SOF_TIMESTAMPING_MASK: ::c_int = (SOF_TIMESTAMPING_LAST - 1)
+    | SOF_TIMESTAMPING_LAST;
+pub const SOF_TIMESTAMPING_TX_RECORD_MASK: ::c_int =
+    (SOF_TIMESTAMPING_TX_HARDWARE
+    | SOF_TIMESTAMPING_TX_SOFTWARE
+    | SOF_TIMESTAMPING_TX_SCHED
+    | SOF_TIMESTAMPING_TX_ACK);
+
 pub const SA_ONSTACK: ::c_int = 0x08000000;
 pub const SA_SIGINFO: ::c_int = 0x00000004;
 pub const SA_NOCLDWAIT: ::c_int = 0x00000002;
